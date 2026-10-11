@@ -1,0 +1,6 @@
+{
+  "name": "Verya - Field Dispatch & Delivery Interface",
+  "description": "Tactical, high-efficiency field dispatch and delivery operations interface for delivery partners.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

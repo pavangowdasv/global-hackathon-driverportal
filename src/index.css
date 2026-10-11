@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #35A88A;
+  --color-primary-dark: #27866F;
+  --color-mint: #E7F5EF;
+  --color-text-primary: #26352F;
+  --color-text-secondary: #5C6E66;
+  --color-border-subtle: #E5ECE8;
+  --color-surface-bg: #FFFFFF;
+  --color-card-bg: #FFFFFF;
+
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #E8EDEB;
+    color: #26352F;
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior: none;
+    height: 100%;
+  }
+
+  #root {
+    height: 100%;
+    min-height: 100dvh;
+  }
+
+  /* Hide scrollbar for mobile touch feel */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    box-sizing: border-box;
+  }
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  vertical-align: middle;
+}
+
+/* Spinner utility */
+.border-3 {
+  border-width: 3px;
+}
+
+/* Leaflet z-index layering — keeps map under app UI */
+.leaflet-container {
+  z-index: 0 !important;
+}
+.leaflet-pane {
+  z-index: 1 !important;
+}
+.leaflet-control {
+  z-index: 2 !important;
+}
+
+/* Keep attribution from overlapping zoom controls */
+.leaflet-bottom.leaflet-right {
+  bottom: 40px;
+}
